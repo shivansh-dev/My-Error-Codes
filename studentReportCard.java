@@ -14,7 +14,7 @@ public class studentReportCard {
 	char grade;
 	int noOfSubjects;
 	
-	public studentReportCard()
+	/*public studentReportCard()
 	{
 		rollNo=0;
 		name="Enter Name Here";
@@ -49,10 +49,9 @@ public class studentReportCard {
 		percentage=calculatePercentage(totalMarks);
 		grade=calculateGrade(percentage);
 	}
-	
+	*/
 	public studentReportCard(int rollNo,String name,String course,int[] marks,
 			int noOfSubjects) {
-		this(rollNo,name,course,marks);
 		this.rollNo=rollNo;
 		this.name=name;
 		this.course=course;
@@ -80,7 +79,7 @@ public class studentReportCard {
 	}
 	public int calculateTotalMarks(int[] marks) {
 		int totalTemp=0;
-		for(int i=0;i<3;i++) {
+		for(int i=0;i<noOfSubjects;i++) {
 			totalTemp+=marks[i];
 		}
 			return totalTemp;
